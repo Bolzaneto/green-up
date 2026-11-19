@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Green Up – Verde a scuola e benessere</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDF2EA; --surface:#FAFCF8; --ink:#1B261D; --muted:#4F5F54;
+  --accent:#2D5A3D; --accent-ink:#FFFFFF; --line:#B3C3B0; --focus:#6A3FD0;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#121A14; --surface:#1A261D; --ink:#E6EFE5; --muted:#A5B6AA;
+        --accent:#86CBA0; --accent-ink:#0F1B13; --line:#34493A; --focus:#B79CFF;}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.6 var(--sans);
+  padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0)}
+.wrap{max-width:38rem;margin:0 auto;padding:1.25rem 1.1rem 3rem}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+h1,h2{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0}
+.site-title{font-size:2.6rem;letter-spacing:-.01em}
+.site-sub{margin:.5rem 0 1.5rem;color:var(--muted);max-width:30rem}
+.hint{color:var(--muted);margin:0 0 .75rem}
+/* elenco piante */
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.list a{display:flex;gap:1rem;align-items:center;padding:.8rem .2rem;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
+.list a:hover .nm{text-decoration:underline}
+.thumb{width:4.5rem;height:4.5rem;flex:none;border-radius:4px;object-fit:cover;background:var(--surface);border:1px solid var(--line)}
+.nm{font-family:var(--serif);font-size:1.3rem;font-weight:600;display:block}
+.sci{font-family:var(--serif);font-style:italic;color:var(--muted)}
+/* scheda */
+.back{display:inline-block;margin:.2rem 0 1rem;color:var(--accent);font-weight:700;padding:.4rem 0}
+.photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;border:1px solid var(--line);background:var(--surface);display:block}
+.ph{display:grid;place-items:center;text-align:center;padding:1rem;color:var(--muted);font-size:.95rem}
+.credit{font-size:.85rem;color:var(--muted);margin:.35rem 0 1.25rem}
+.label{background:var(--surface);border:2px solid var(--ink);border-radius:4px;padding:1.1rem 1.1rem 1.25rem;margin-top:.5rem}
+.label h2{font-size:2.1rem}
+.label .sci{font-size:1.2rem;margin:.1rem 0 .9rem}
+.langs{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1rem;padding:0;border:0}
+.langs legend{position:absolute;left:-9999px}
+.chip{font:inherit;font-weight:700;min-height:2.75rem;padding:.4rem 1rem;border-radius:999px;border:2px solid var(--accent);background:transparent;color:var(--accent);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.play{display:flex;align-items:center;justify-content:center;gap:.6rem;width:100%;min-height:3.5rem;font:inherit;font-size:1.15rem;font-weight:700;border:0;border-radius:6px;background:var(--accent);color:var(--accent-ink);cursor:pointer;margin:0 0 .4rem}
+.play:disabled{background:transparent;color:var(--muted);border:2px dashed var(--line);cursor:default}
+.play svg{width:1.3rem;height:1.3rem;fill:currentColor}
+.msg{min-height:1.4rem;margin:0 0 .8rem;color:var(--muted);font-size:.95rem}
+.sec{margin:1.1rem 0 0}
+.sec b{display:block;font-family:var(--serif);font-size:1.05rem;margin-bottom:.15rem}
+.sec p{margin:0}
+.err{background:var(--surface);border:2px solid var(--ink);border-radius:4px;padding:1rem}
+.foot{margin-top:2.5rem;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap"><main id="app" aria-live="polite"></main></div>
+<script>
+(function(){
+"use strict";
+var app=document.getElementById("app");
+var DATA=null, lang="it", audio=null;
+
+try{ var saved=localStorage.getItem("greenup-lang"); if(saved) lang=saved; }catch(e){}
+
+function h(tag,attrs){
+  var n=document.createElement(tag);
+  for(var k in (attrs||{})){
+    if(k==="class") n.className=attrs[k];
+    else if(k==="text") n.textContent=attrs[k];
+    else n.setAttribute(k,attrs[k]);
+  }
+  for(var i=2;i<arguments.length;i++){ if(arguments[i]) n.appendChild(arguments[i]); }
+  return n;
+}
+function ui(l,key){
+  var L=DATA.lingue[l]; if(L&&L.ui&&L.ui[key]) return L.ui[key];
+  return (DATA.lingue.it.ui||{})[key]||"";
+}
+function pickLang(p){
+  if(p.lingue[lang]) return lang;
+  if(p.lingue.it) return "it";
+  return Object.keys(p.lingue)[0];
+}
+function dirOf(code){ var L=DATA.lingue[code]; return (L&&L.dir)||"ltr"; }
+function stopAudio(){ if(audio){ audio.pause(); audio=null; } }
+function placeholder(cls,msg){ return h("div",{class:cls+" ph",text:msg}); }
+
+function renderHome(){
+  stopAudio(); document.title=DATA.titolo;
+  app.textContent="";
+  app.appendChild(h("h1",{class:"site-title",text:DATA.titolo}));
+  app.appendChild(h("p",{class:"site-sub",text:DATA.sottotitolo}));
+  app.appendChild(h("p",{class:"hint",text:ui(lang,"scegli")}));
+  var ul=h("ul",{class:"list"});
+  DATA.piante.forEach(function(p){
+    var l=pickLang(p), info=p.lingue[l];
+    var img=h("img",{class:"thumb",src:p.immagine,alt:"",loading:"lazy"});
+    img.onerror=function(){ img.replaceWith(h("div",{class:"thumb ph",text:"🌿"})); };
+    var a=h("a",{href:"#"+p.id},img,
+      h("span",null,h("span",{class:"nm",lang:l,dir:dirOf(l),text:info.nome}),h("span",{class:"sci",text:p.nomeScientifico})));
+    ul.appendChild(h("li",null,a));
+  });
+  app.appendChild(ul);
+}
+
+function renderPlant(p){
+  stopAudio();
+  var l=pickLang(p), info=p.lingue[l];
+  document.title=info.nome+" – "+DATA.titolo;
+  app.textContent="";
+  app.appendChild(h("a",{class:"back",href:"#",text:ui(l,"tutte")}));
+
+  var img=h("img",{class:"photo",src:p.immagine,alt:info.nome+" ("+p.nomeScientifico+")"});
+  img.onerror=function(){ img.replaceWith(placeholder("photo","Immagine non ancora caricata: "+p.immagine)); };
+  app.appendChild(img);
+  if(p.crediti) app.appendChild(h("p",{class:"credit",text:p.crediti}));
+
+  var card=h("div",{class:"label",dir:dirOf(l),lang:l});
+  card.appendChild(h("h2",{text:info.nome}));
+  card.appendChild(h("div",{class:"sci",dir:"ltr",lang:"la",text:p.nomeScientifico}));
+
+  var fs=h("fieldset",{class:"langs",dir:"ltr"},h("legend",{text:ui(l,"lingua")}));
+  Object.keys(p.lingue).forEach(function(code){
+    var b=h("button",{type:"button",class:"chip","aria-pressed":String(code===l),lang:code,text:(DATA.lingue[code]||{nome:code}).nome});
+    b.onclick=function(){ lang=code; try{localStorage.setItem("greenup-lang",code);}catch(e){} renderPlant(p); };
+    fs.appendChild(b);
+  });
+  card.appendChild(fs);
+
+  var msg=h("p",{class:"msg"});
+  var play=h("button",{type:"button",class:"play"});
+  var icoPlay='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
+  var icoPause='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>';
+  function setLabel(playing){
+    play.innerHTML=(playing?icoPause:icoPlay)+"<span></span>";
+    play.lastChild.textContent=ui(l,playing?"pausa":"ascolta");
+  }
+  var src="audio/"+p.id+"/"+p.id+"_"+l+".mp3";
+  play.disabled=true; play.textContent="…";
+  fetch(src,{method:"HEAD"}).then(function(r){
+    var ct=r.headers.get("content-type")||"";
+    return r.ok && ct.indexOf("text/html")<0;
+  }).catch(function(){ return false; }).then(function(ok){
+    if(!document.body.contains(play)) return;
+    if(!ok){ play.textContent=ui(l,"audioInArrivo"); return; }
+    play.disabled=false; setLabel(false);
+    play.onclick=function(){
+      msg.textContent="";
+      if(!audio){
+        audio=new Audio(src);
+        audio.addEventListener("ended",function(){ setLabel(false); });
+        audio.addEventListener("error",function(){ setLabel(false); msg.textContent=ui(l,"erroreAudio"); audio=null; });
+      }
+      if(audio.paused){ audio.play().then(function(){ setLabel(true); }).catch(function(){ setLabel(false); msg.textContent=ui(l,"erroreAudio"); }); }
+      else { audio.pause(); setLabel(false); }
+    };
+  });
+  card.appendChild(play); card.appendChild(msg);
+
+  card.appendChild(h("p",{class:"sec",lang:l,text:info.testo}));
+  if(info.etimologia) card.appendChild(h("div",{class:"sec"},h("b",{text:ui(l,"origine")||"Origine del nome"}),h("p",{text:info.etimologia})));
+  if(info.curiosita) card.appendChild(h("div",{class:"sec"},h("b",{text:ui(l,"curiosita")||"Curiosità"}),h("p",{lang:l,text:info.curiosita})));
+  app.appendChild(card);
+  window.scrollTo(0,0);
+}
+
+function route(){
+  var id=decodeURIComponent((location.hash||"").slice(1));
+  var p=DATA.piante.filter(function(x){return x.id===id;})[0];
+  if(p) renderPlant(p); else renderHome();
+}
+
+fetch("piante.json").then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+.then(function(d){ DATA=d; window.addEventListener("hashchange",route); route(); })
+.catch(function(){
+  app.textContent="";
+  app.appendChild(h("div",{class:"err"},
+    h("p",{text:"Non riesco a caricare piante.json."}),
+    h("p",{text:"In locale la pagina va aperta tramite un piccolo server (vedi LEGGIMI.md), non con doppio clic sul file."})));
+});
+})();
+</script>
+</body>
+</html>

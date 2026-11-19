@@ -1,0 +1,413 @@
+{
+ "titolo": "Green Up",
+ "sottotitolo": "Le parole dell’orto: erbe aromatiche e bulbi in sei lingue",
+ "lingue": {
+  "it": {
+   "nome": "Italiano",
+   "ui": {
+    "ascolta": "Ascolta",
+    "pausa": "Pausa",
+    "audioInArrivo": "Audio in arrivo",
+    "erroreAudio": "Non riesco a caricare l’audio. Riprova più tardi.",
+    "tutte": "Tutte le piante",
+    "scegli": "Tocca una pianta per scoprirla",
+    "lingua": "Lingua",
+    "origine": "Da dove viene il nome",
+    "curiosita": "Curiosità"
+   }
+  },
+  "ro": {
+   "nome": "Română",
+   "ui": {
+    "ascolta": "Ascultă",
+    "pausa": "Pauză",
+    "audioInArrivo": "Audio în curând",
+    "erroreAudio": "Nu pot încărca audio. Încearcă din nou mai târziu.",
+    "tutte": "Toate plantele",
+    "scegli": "Atinge o plantă ca să o descoperi",
+    "lingua": "Limba"
+   }
+  },
+  "ru": {
+   "nome": "Русский",
+   "ui": {
+    "ascolta": "Слушать",
+    "pausa": "Пауза",
+    "audioInArrivo": "Аудио скоро появится",
+    "erroreAudio": "Не удалось загрузить аудио. Попробуйте позже.",
+    "tutte": "Все растения",
+    "scegli": "Нажмите на растение, чтобы узнать о нём",
+    "lingua": "Язык"
+   }
+  },
+  "sq": {
+   "nome": "Shqip",
+   "ui": {
+    "ascolta": "Dëgjo",
+    "pausa": "Pauzë",
+    "audioInArrivo": "Audioja së shpejti",
+    "erroreAudio": "Audioja nuk u ngarkua. Provo përsëri më vonë.",
+    "tutte": "Të gjitha bimët",
+    "scegli": "Prek një bimë për ta zbuluar",
+    "lingua": "Gjuha"
+   }
+  },
+  "ar": {
+   "nome": "العربية",
+   "dir": "rtl",
+   "ui": {
+    "ascolta": "استمع",
+    "pausa": "إيقاف مؤقت",
+    "audioInArrivo": "التسجيل الصوتي قريبًا",
+    "erroreAudio": "تعذّر تحميل التسجيل. حاول مرة أخرى لاحقًا.",
+    "tutte": "كل النباتات",
+    "scegli": "المس نباتًا لتكتشفه",
+    "lingua": "اللغة"
+   }
+  },
+  "es": {
+   "nome": "Español",
+   "ui": {
+    "ascolta": "Escuchar",
+    "pausa": "Pausa",
+    "audioInArrivo": "Audio próximamente",
+    "erroreAudio": "No se pudo cargar el audio. Inténtalo más tarde.",
+    "tutte": "Todas las plantas",
+    "scegli": "Toca una planta para descubrirla",
+    "lingua": "Idioma"
+   }
+  }
+ },
+ "piante": [
+  {
+   "id": "basilico",
+   "nomeScientifico": "Ocimum basilicum",
+   "immagine": "immagini/basilico.jpg",
+   "lingue": {
+    "it": {
+     "nome": "basilico",
+     "testo": "Ciao, sono il basilico! In italiano il mio nome viene dal greco e vuol dire «regale», cioè degno di un re. A Genova con le mie foglie si prepara il pesto, con pinoli, aglio, formaggio e olio. Amo il sole e il caldo, ma ho bisogno di tanta acqua: se mi dimentichi, appassisco subito. D’inverno soffro il freddo.",
+     "etimologia": "dal greco basilikón, «regale, degno di un re»",
+     "curiosita": "È l’ingrediente principale del pesto genovese."
+    },
+    "ro": {
+     "nome": "busuioc",
+     "testo": "Bună, eu sunt busuiocul! În italiană, numele meu vine din greacă și înseamnă «regal», adică demn de un rege. La Genova, din frunzele mele se prepară pesto, cu semințe de pin, usturoi, brânză și ulei. Iubesc soarele și căldura, dar am nevoie de multă apă: dacă mă uiți, mă ofilesc imediat. Iarna sufăr de frig."
+    },
+    "ru": {
+     "nome": "базилик",
+     "testo": "Привет, я базилик! По-итальянски моё имя происходит от греческого слова и значит «царский», то есть достойный царя. В Генуе из моих листьев готовят песто с кедровыми орешками, чесноком, сыром и оливковым маслом. Я люблю солнце и тепло, но мне нужно много воды: если про меня забыть, я сразу вяну. Зимой я страдаю от холода."
+    },
+    "sq": {
+     "nome": "borzilok",
+     "testo": "Përshëndetje, unë jam borziloku! Në italisht, emri im vjen nga greqishtja dhe do të thotë «mbretëror», domethënë i denjë për një mbret. Në Gjenova, me gjethet e mia përgatitet pesto, me fara pishe, hudhër, djathë dhe vaj. Më pëlqen dielli dhe vapa, por kam nevojë për shumë ujë: nëse më harron, vyshkem menjëherë. Në dimër më dëmton i ftohti."
+    },
+    "ar": {
+     "nome": "ريحان",
+     "testo": "مرحبًا، أنا الريحان! اسمي بالإيطالية يأتي من اللغة اليونانية ومعناه «ملكي»، أي يليق بالملك. في جنوة، تُحضَّر صلصة البيستو من أوراقي مع الصنوبر والثوم والجبن والزيت. أحبّ الشمس والدفء، لكنني أحتاج إلى الكثير من الماء: إذا نسيتني، أذبل بسرعة. وفي الشتاء أتألم من البرد."
+    },
+    "es": {
+     "nome": "albahaca",
+     "testo": "¡Hola, soy la albahaca! En italiano, mi nombre viene del griego y significa «real», es decir, digno de un rey. En Génova, con mis hojas se prepara el pesto, con piñones, ajo, queso y aceite. Me encantan el sol y el calor, pero necesito mucha agua: si te olvidas de mí, me marchito enseguida. En invierno sufro el frío."
+    }
+   }
+  },
+  {
+   "id": "rosmarino",
+   "nomeScientifico": "Salvia rosmarinus",
+   "immagine": "immagini/rosmarino.jpg",
+   "lingue": {
+    "it": {
+     "nome": "rosmarino",
+     "testo": "Ciao, sono il rosmarino! In italiano il mio nome viene dal latino e vuol dire «rugiada del mare». Cresco vicino al mare, anche sulle coste della Liguria, e resisto al vento e al sole forte. Le mie foglie sono sottili come aghi e restano verdi tutto l’anno. In cucina mi mettono sulle patate, sulla carne e sulla focaccia.",
+     "etimologia": "dal latino ros marinus, «rugiada del mare»",
+     "curiosita": "Cresce spontaneo sulle coste della Liguria. Gli scienziati lo hanno messo nello stesso genere della salvia."
+    },
+    "ro": {
+     "nome": "rozmarin",
+     "testo": "Bună, eu sunt rozmarinul! În italiană, numele meu vine din latină și înseamnă «roua mării». Cresc lângă mare, și pe coastele Liguriei, și rezist la vânt și la soare puternic. Frunzele mele sunt subțiri ca acele și rămân verzi tot anul. În bucătărie, sunt pus pe cartofi, pe carne și pe focaccia."
+    },
+    "ru": {
+     "nome": "розмарин",
+     "testo": "Привет, я розмарин! По-итальянски моё имя происходит от латыни и значит «морская роса». Я расту у моря, в том числе на побережье Лигурии, и не боюсь ни ветра, ни жаркого солнца. Мои листья тонкие, как иголки, и остаются зелёными круглый год. На кухне меня добавляют к картошке, к мясу и в фокаччу."
+    },
+    "sq": {
+     "nome": "rozmarinë",
+     "testo": "Përshëndetje, unë jam rozmarina! Në italisht, emri im vjen nga latinishtja dhe do të thotë «vesa e detit». Rritem pranë detit, edhe në brigjet e Ligurisë, dhe i rezistoj erës dhe diellit të fortë. Gjethet e mia janë të holla si gjilpëra dhe mbeten të gjelbra gjithë vitin. Në kuzhinë më hedhin mbi patate, mbi mish dhe mbi fokaçe."
+    },
+    "ar": {
+     "nome": "إكليل الجبل",
+     "testo": "مرحبًا، أنا إكليل الجبل! اسمي بالإيطالية يأتي من اللغة اللاتينية ومعناه «ندى البحر». أنمو قرب البحر، وأيضًا على سواحل ليغوريا، وأتحمّل الرياح والشمس القوية. أوراقي رفيعة مثل الإبر وتبقى خضراء طوال السنة. في المطبخ يضعونني على البطاطا واللحم والفوكاتشا."
+    },
+    "es": {
+     "nome": "romero",
+     "testo": "¡Hola, soy el romero! En italiano, mi nombre viene del latín y significa «rocío del mar». Crezco cerca del mar, también en las costas de Liguria, y resisto el viento y el sol fuerte. Mis hojas son finas como agujas y se quedan verdes todo el año. En la cocina me ponen en las patatas, en la carne y en la focaccia."
+    }
+   }
+  },
+  {
+   "id": "salvia",
+   "nomeScientifico": "Salvia officinalis",
+   "immagine": "immagini/salvia.jpg",
+   "lingue": {
+    "it": {
+     "nome": "salvia",
+     "testo": "Ciao, sono la salvia! In italiano il mio nome viene dal latino e vuol dire «sano, salvo». Nel Medioevo i monaci mi coltivavano per curare le persone. Le mie foglie sono morbide, un po’ pelose, di colore verde-grigio. Oggi mi usano soprattutto in cucina, per esempio con il burro sulla pasta.",
+     "etimologia": "dal latino salvus, «sano, salvo»",
+     "curiosita": "Nel Medioevo si coltivava negli orti dei monasteri come pianta medicinale."
+    },
+    "ro": {
+     "nome": "salvie",
+     "testo": "Bună, eu sunt salvia! În italiană, numele meu vine din latină și înseamnă «sănătos, salvat». În Evul Mediu, călugării mă cultivau ca să vindece oamenii. Frunzele mele sunt moi, puțin păroase, de culoare verde-cenușiu. Astăzi sunt folosită mai ales în bucătărie, de exemplu cu unt pe paste."
+    },
+    "ru": {
+     "nome": "шалфей",
+     "testo": "Привет, я шалфей! По-итальянски моё имя происходит от латыни и значит «здоровый, спасённый». В Средние века монахи выращивали меня, чтобы лечить людей. Мои листья мягкие, немного пушистые, серо-зелёного цвета. Сегодня меня используют в основном на кухне, например со сливочным маслом для пасты."
+    },
+    "sq": {
+     "nome": "sherebelë",
+     "testo": "Përshëndetje, unë jam sherebela! Në italisht, emri im vjen nga latinishtja dhe do të thotë «i shëndetshëm, i shpëtuar». Në Mesjetë, murgjit më kultivonin për të shëruar njerëzit. Gjethet e mia janë të buta, pak me push, me ngjyrë gri të gjelbër. Sot më përdorin sidomos në kuzhinë, për shembull me gjalpë mbi makarona."
+    },
+    "ar": {
+     "nome": "مريمية",
+     "testo": "مرحبًا، أنا المريمية! اسمي بالإيطالية يأتي من اللغة اللاتينية ومعناه «سليم، معافى». في العصور الوسطى كان الرهبان يزرعونني لعلاج الناس. أوراقي ناعمة، فيها شيء من الزغب، ولونها أخضر رمادي. اليوم يستعملونني خاصة في المطبخ، مثلًا مع الزبدة على المعكرونة."
+    },
+    "es": {
+     "nome": "salvia",
+     "testo": "¡Hola, soy la salvia! En italiano, mi nombre viene del latín y significa «sano, salvo». En la Edad Media, los monjes me cultivaban para curar a la gente. Mis hojas son suaves, un poco peludas, de color verde grisáceo. Hoy me usan sobre todo en la cocina, por ejemplo con mantequilla en la pasta."
+    }
+   }
+  },
+  {
+   "id": "menta",
+   "nomeScientifico": "Mentha",
+   "immagine": "immagini/menta.jpg",
+   "lingue": {
+    "it": {
+     "nome": "menta",
+     "testo": "Ciao, sono la menta! In italiano il mio nome viene da Minta, una ninfa del mito greco trasformata in una pianta. Le mie foglie sono fresche e profumate. Cresco in fretta e, se nessuno mi ferma, riempio tutto il vaso! In molti paesi del Nord Africa con le mie foglie si prepara il tè alla menta.",
+     "etimologia": "da Minta, una ninfa del mito",
+     "curiosita": "Secondo il mito, la dea Persefone la trasformò in una pianta profumata."
+    },
+    "ro": {
+     "nome": "mentă",
+     "testo": "Bună, eu sunt menta! În italiană, numele meu vine de la Minta, o nimfă din mitologia greacă transformată într-o plantă. Frunzele mele sunt răcoroase și parfumate. Cresc repede și, dacă nu mă oprește nimeni, umplu tot ghiveciul! În multe țări din Africa de Nord, din frunzele mele se prepară ceai de mentă."
+    },
+    "ru": {
+     "nome": "мята",
+     "testo": "Привет, я мята! По-итальянски моё имя происходит от имени Минты — нимфы из греческого мифа, которую превратили в растение. Мои листья свежие и ароматные. Я расту очень быстро и, если меня не остановить, заполняю весь горшок! Во многих странах Северной Африки из моих листьев готовят мятный чай."
+    },
+    "sq": {
+     "nome": "mendër",
+     "testo": "Përshëndetje, unë jam mendra! Në italisht, emri im vjen nga Minta, një nimfë e mitologjisë greke që u shndërrua në bimë. Gjethet e mia janë të freskëta dhe aromatike. Rritem shpejt dhe, nëse nuk më ndalon askush, mbush gjithë vazon! Në shumë vende të Afrikës së Veriut, me gjethet e mia përgatitet çaj me mendër."
+    },
+    "ar": {
+     "nome": "نعناع",
+     "testo": "مرحبًا، أنا النعناع! اسمي بالإيطالية يأتي من «مينتا»، وهي حورية في الأساطير اليونانية تحوّلت إلى نبتة. أوراقي منعشة وعطرة. أنمو بسرعة، وإذا لم يوقفني أحد، أملأ الأصيص كله! في كثير من بلدان شمال أفريقيا يُحضَّر من أوراقي الشاي بالنعناع."
+    },
+    "es": {
+     "nome": "menta",
+     "testo": "¡Hola, soy la menta! En italiano, mi nombre viene de Minta, una ninfa de la mitología griega que fue transformada en planta. Mis hojas son frescas y perfumadas. Crezco muy rápido y, si nadie me para, ¡lleno toda la maceta! En muchos países del norte de África, con mis hojas se prepara el té de menta."
+    }
+   }
+  },
+  {
+   "id": "lavanda",
+   "nomeScientifico": "Lavandula",
+   "immagine": "immagini/lavanda.jpg",
+   "lingue": {
+    "it": {
+     "nome": "lavanda",
+     "testo": "Ciao, sono la lavanda! In italiano il mio nome viene dal verbo «lavare». Un tempo mi mettevano nell’acqua per profumare il bucato. I miei fiori sono viola e il mio profumo tiene lontane le tarme dagli armadi. Le api mi adorano.",
+     "etimologia": "dal verbo lavare",
+     "curiosita": "Si metteva nell’acqua del bucato e del bagno per profumarli."
+    },
+    "ro": {
+     "nome": "levănțică",
+     "testo": "Bună, eu sunt levănțica! În italiană, numele meu vine de la verbul «a spăla». Pe vremuri, oamenii mă puneau în apă ca să parfumeze rufele. Florile mele sunt mov, iar parfumul meu ține moliile departe de dulapuri. Albinele mă adoră."
+    },
+    "ru": {
+     "nome": "лаванда",
+     "testo": "Привет, я лаванда! По-итальянски моё имя происходит от глагола «мыть». Раньше люди клали меня в воду, чтобы бельё приятно пахло. Мои цветы фиолетовые, а мой запах отпугивает моль из шкафов. Пчёлы меня обожают."
+    },
+    "sq": {
+     "nome": "livando",
+     "testo": "Përshëndetje, unë jam livandoja! Në italisht, emri im vjen nga folja «të lash». Dikur njerëzit më vendosnin në ujë për të parfumuar rrobat. Lulet e mia janë vjollcë dhe aroma ime i largon tenjat nga dollapët. Bletët më adhurojnë."
+    },
+    "ar": {
+     "nome": "خزامى",
+     "testo": "مرحبًا، أنا الخزامى! اسمي بالإيطالية يأتي من فعل «غسل». في الماضي كان الناس يضعونني في الماء ليعطّروا الغسيل. أزهاري بنفسجية، ورائحتي تُبعد العُثّ عن الخزائن. والنحل يحبّني كثيرًا."
+    },
+    "es": {
+     "nome": "lavanda",
+     "testo": "¡Hola, soy la lavanda! En italiano, mi nombre viene del verbo «lavar». Antes, la gente me ponía en el agua para perfumar la ropa. Mis flores son moradas y mi perfume aleja las polillas de los armarios. Las abejas me adoran."
+    }
+   }
+  },
+  {
+   "id": "prezzemolo",
+   "nomeScientifico": "Petroselinum crispum",
+   "immagine": "immagini/prezzemolo.jpg",
+   "lingue": {
+    "it": {
+     "nome": "prezzemolo",
+     "testo": "Ciao, sono il prezzemolo! In italiano il mio nome viene dal latino e vuol dire «sedano di roccia». Mi mettono in tanti piatti: per questo si dice «essere come il prezzemolo», cioè essere dappertutto. Sono pigro a nascere: a volte servono tre settimane per vedermi spuntare. Le mie foglie sono ricche di vitamina C.",
+     "etimologia": "dal latino petroselinum, «sedano di roccia»",
+     "curiosita": "Si mette in tanti piatti: da qui il modo di dire «essere come il prezzemolo»."
+    },
+    "ro": {
+     "nome": "pătrunjel",
+     "testo": "Bună, eu sunt pătrunjelul! În italiană, numele meu vine din latină și înseamnă «țelină de stâncă». Sunt pus în multe mâncăruri: de aceea italienii spun «a fi ca pătrunjelul», adică a fi peste tot. Sunt leneș la răsărit: uneori trebuie să aștepți trei săptămâni ca să mă vezi ieșind din pământ. Frunzele mele sunt bogate în vitamina C."
+    },
+    "ru": {
+     "nome": "петрушка",
+     "testo": "Привет, я петрушка! По-итальянски моё имя происходит от латыни и значит «каменный сельдерей». Меня кладут во многие блюда, поэтому итальянцы говорят «быть как петрушка», то есть быть везде. Я очень медленно прорастаю: иногда проходит три недели, прежде чем я появлюсь из земли. Мои листья богаты витамином C."
+    },
+    "sq": {
+     "nome": "majdanoz",
+     "testo": "Përshëndetje, unë jam majdanozi! Në italisht, emri im vjen nga latinishtja dhe do të thotë «selino shkëmbi». Më vënë në shumë gjellë: prandaj italianët thonë «të jesh si majdanozi», domethënë të jesh kudo. Jam përtac për të mbirë: ndonjëherë duhen tri javë që të më shohësh të dal nga toka. Gjethet e mia janë të pasura me vitaminë C."
+    },
+    "ar": {
+     "nome": "بقدونس",
+     "testo": "مرحبًا، أنا البقدونس! اسمي بالإيطالية يأتي من اللغة اللاتينية ومعناه «كرفس الصخر». يضعونني في أطباق كثيرة، لذلك يقول الإيطاليون «أن تكون مثل البقدونس»، أي أن تكون في كل مكان. أنا بطيء في الإنبات: أحيانًا يلزم ثلاثة أسابيع لتراني أخرج من التراب. أوراقي غنية بفيتامين سي."
+    },
+    "es": {
+     "nome": "perejil",
+     "testo": "¡Hola, soy el perejil! En italiano, mi nombre viene del latín y significa «apio de roca». Me ponen en muchos platos: por eso los italianos dicen «ser como el perejil», es decir, estar en todas partes. Soy perezoso para nacer: a veces hacen falta tres semanas para verme brotar. Mis hojas son ricas en vitamina C."
+    }
+   }
+  },
+  {
+   "id": "tulipano",
+   "nomeScientifico": "Tulipa",
+   "immagine": "immagini/tulipano.jpg",
+   "lingue": {
+    "it": {
+     "nome": "tulipano",
+     "testo": "Ciao, sono il tulipano! In italiano il mio nome viene dal turco e vuol dire «turbante», perché il mio fiore ne ha la forma. Sono arrivato in Europa dalla Turchia circa cinquecento anni fa. In Olanda, nel Seicento, i miei bulbi erano così ricercati che uno poteva costare quanto una casa! Mi piantano in autunno e fiorisco in primavera.",
+     "etimologia": "dal turco, attraverso il persiano: «turbante»",
+     "curiosita": "Il fiore ha la forma di un turbante. È arrivato in Europa dalla Turchia nel Cinquecento."
+    },
+    "ro": {
+     "nome": "lalea",
+     "testo": "Bună, eu sunt laleaua! În italiană, numele meu vine din turcă și înseamnă «turban», pentru că floarea mea are forma unui turban. Am ajuns în Europa din Turcia acum aproximativ cinci sute de ani. În Olanda, în secolul al XVII-lea, bulbii mei erau atât de căutați încât unul putea costa cât o casă! Sunt plantată toamna și înfloresc primăvara."
+    },
+    "ru": {
+     "nome": "тюльпан",
+     "testo": "Привет, я тюльпан! По-итальянски моё имя происходит от турецкого слова и значит «тюрбан», потому что мой цветок похож на тюрбан. Я попал в Европу из Турции около пятисот лет назад. В Голландии в семнадцатом веке мои луковицы были такими желанными, что одна могла стоить как целый дом! Меня сажают осенью, а цвету я весной."
+    },
+    "sq": {
+     "nome": "tulipan",
+     "testo": "Përshëndetje, unë jam tulipani! Në italisht, emri im vjen nga turqishtja dhe do të thotë «çallmë», sepse lulja ime ka formën e një çallme. Kam ardhur në Evropë nga Turqia rreth pesëqind vjet më parë. Në Holandë, në shekullin XVII, bulbet e mia ishin aq të kërkuara sa një i vetëm mund të kushtonte sa një shtëpi! Më mbjellin në vjeshtë dhe lulëzoj në pranverë."
+    },
+    "ar": {
+     "nome": "توليب",
+     "testo": "مرحبًا، أنا التوليب! اسمي بالإيطالية يأتي من اللغة التركية ومعناه «العِمامة»، لأن زهرتي تشبه العمامة. وصلتُ إلى أوروبا من تركيا قبل نحو خمسمئة عام. في هولندا، في القرن السابع عشر، كانت أبصالي مطلوبة جدًا حتى إن بصلة واحدة كانت تساوي ثمن بيت! يزرعونني في الخريف وأُزهر في الربيع."
+    },
+    "es": {
+     "nome": "tulipán",
+     "testo": "¡Hola, soy el tulipán! En italiano, mi nombre viene del turco y significa «turbante», porque mi flor tiene su forma. Llegué a Europa desde Turquía hace unos quinientos años. En Holanda, en el siglo XVII, mis bulbos eran tan buscados que uno podía costar lo mismo que una casa. Me plantan en otoño y florezco en primavera."
+    }
+   }
+  },
+  {
+   "id": "narciso",
+   "nomeScientifico": "Narcissus",
+   "immagine": "immagini/narciso.jpg",
+   "lingue": {
+    "it": {
+     "nome": "narciso",
+     "testo": "Ciao, sono il narciso! Il mio nome viene da Narciso, un giovane del mito greco che si innamorò della propria immagine riflessa nell’acqua e fu trasformato in fiore. Per questo il mio fiore si piega verso il basso, come se si specchiasse. Fiorisco all’inizio della primavera. Sono bello ma velenoso: non devi mangiarmi!",
+     "etimologia": "dal mito di Narciso",
+     "curiosita": "Un giovane bellissimo si innamorò della propria immagine riflessa nell’acqua e fu trasformato in fiore. Da qui la parola narcisista."
+    },
+    "ro": {
+     "nome": "narcisă",
+     "testo": "Bună, eu sunt narcisa! Numele meu vine de la Narcis, un tânăr din mitologia greacă care s-a îndrăgostit de propria imagine reflectată în apă și a fost transformat în floare. De aceea floarea mea se apleacă în jos, ca și cum s-ar oglindi. Înfloresc la începutul primăverii. Sunt frumoasă, dar otrăvitoare: nu trebuie să mă mănânci!"
+    },
+    "ru": {
+     "nome": "нарцисс",
+     "testo": "Привет, я нарцисс! Моё имя происходит от имени Нарцисса — юноши из греческого мифа, который влюбился в своё отражение в воде и был превращён в цветок. Поэтому мой цветок склоняется вниз, как будто смотрится в зеркало. Я цвету в начале весны. Я красивый, но ядовитый: меня нельзя есть!"
+    },
+    "sq": {
+     "nome": "narcis",
+     "testo": "Përshëndetje, unë jam narcisi! Emri im vjen nga Narcisi, një djalë i ri i mitologjisë greke që u dashurua me pasqyrimin e vet në ujë dhe u shndërrua në lule. Për këtë arsye lulja ime përkulet poshtë, sikur të pasqyrohej. Lulëzoj në fillim të pranverës. Jam i bukur, por helmues: nuk duhet të më hash!"
+    },
+    "ar": {
+     "nome": "نرجس",
+     "testo": "مرحبًا، أنا النرجس! اسمي يأتي من نرجس، شاب في الأساطير اليونانية أحبَّ صورته المنعكسة في الماء فتحوّل إلى زهرة. لهذا تنحني زهرتي إلى الأسفل، كأنها تنظر إلى نفسها في الماء. أُزهر في بداية الربيع. أنا جميل لكنني سامّ: لا تأكلني!"
+    },
+    "es": {
+     "nome": "narciso",
+     "testo": "¡Hola, soy el narciso! Mi nombre viene de Narciso, un joven de la mitología griega que se enamoró de su propia imagen reflejada en el agua y fue transformado en flor. Por eso mi flor se inclina hacia abajo, como si se mirara en un espejo. Florezco al principio de la primavera. Soy bonito, pero venenoso: ¡no me comas!"
+    }
+   }
+  },
+  {
+   "id": "giacinto",
+   "nomeScientifico": "Hyacinthus orientalis",
+   "immagine": "immagini/giacinto.jpg",
+   "lingue": {
+    "it": {
+     "nome": "giacinto",
+     "testo": "Ciao, sono il giacinto! Il mio nome viene da Giacinto, un giovane amico del dio Apollo. Mentre giocavano a lanciare il disco, il disco lo colpì per sbaglio. Secondo il mito, dal suo sangue nacque un fiore profumato: io! I miei fiori sono piccoli, stretti uno all’altro a grappolo, e hanno un profumo fortissimo.",
+     "etimologia": "dal mito di Giacinto",
+     "curiosita": "Un giovane amico del dio Apollo fu colpito per sbaglio da un disco. Dal suo sangue nacque il fiore."
+    },
+    "ro": {
+     "nome": "zambilă",
+     "testo": "Bună, eu sunt zambila! În italiană, numele meu vine de la Hyakinthos (Giacinto), un tânăr prieten al zeului Apollo. În timp ce se jucau aruncând discul, discul l-a lovit din greșeală. După mit, din sângele lui s-a născut o floare parfumată: eu! Florile mele sunt mici, strânse una lângă alta ca un ciorchine, și au un parfum foarte puternic."
+    },
+    "ru": {
+     "nome": "гиацинт",
+     "testo": "Привет, я гиацинт! Моё имя происходит от имени Гиацинта — юноши, друга бога Аполлона. Когда они играли, бросая диск, диск случайно попал в Гиацинта. Согласно мифу, из его крови вырос ароматный цветок — это я! Мои цветки маленькие, тесно прижаты друг к другу, как гроздь, и пахнут очень сильно."
+    },
+    "sq": {
+     "nome": "zymbyl",
+     "testo": "Përshëndetje, unë jam zymbyli! Në italisht, emri im vjen nga Hiakinti, një djalë i ri, mik i perëndisë Apollon. Ndërsa luanin duke hedhur diskun, disku e goditi gabimisht. Sipas mitit, nga gjaku i tij lindi një lule aromatike: unë! Lulet e mia janë të vogla, të ngjeshura njëra pas tjetrës si një vile, dhe kanë një aromë shumë të fortë."
+    },
+    "ar": {
+     "nome": "سنبل",
+     "testo": "مرحبًا، أنا السُّنبل! اسمي بالإيطالية يأتي من «ياكينثوس»، شاب كان صديقًا للإله أبولو. بينما كانا يلعبان برمي القرص، أصابه القرص خطأً. تقول الأسطورة إن زهرة عطرة نبتت من دمه: إنها أنا! أزهاري صغيرة، متلاصقة بعضها ببعض مثل العنقود، ورائحتها قوية جدًا."
+    },
+    "es": {
+     "nome": "jacinto",
+     "testo": "¡Hola, soy el jacinto! Mi nombre viene de Jacinto, un joven amigo del dios Apolo. Mientras jugaban a lanzar el disco, el disco lo golpeó sin querer. Según el mito, de su sangre nació una flor perfumada: ¡yo! Mis flores son pequeñas, muy juntas unas a otras como un racimo, y tienen un perfume fortísimo."
+    }
+   }
+  },
+  {
+   "id": "croco",
+   "nomeScientifico": "Crocus",
+   "immagine": "immagini/croco.jpg",
+   "lingue": {
+    "it": {
+     "nome": "croco",
+     "testo": "Ciao, sono il croco! In italiano il mio nome viene dal greco. Fiorisco quando fa ancora freddo, a volte tra la neve. Da un tipo di croco si ricava lo zafferano: si usano i filamenti rossi del fiore, raccolti a mano. Ne servono tantissimi per un solo grammo, per questo lo zafferano costa così caro. Dà il colore giallo al risotto alla milanese.",
+     "etimologia": "dal greco krókos",
+     "curiosita": "Da un tipo di croco si ricava lo zafferano, parola che viene dall’arabo za’farān."
+    },
+    "ro": {
+     "nome": "brândușă",
+     "testo": "Bună, eu sunt brândușa! În italiană, numele meu vine din greacă. Înfloresc când încă e frig, uneori printre zăpezi. Dintr-un anumit fel de brândușă se obține șofranul: se folosesc firicelele roșii din floare, culese de mână. Sunt necesare foarte multe pentru un singur gram, de aceea șofranul este atât de scump. El dă culoarea galbenă risottoului milanez."
+    },
+    "ru": {
+     "nome": "крокус",
+     "testo": "Привет, я крокус! По-итальянски моё имя происходит от греческого слова. Я цвету, когда ещё холодно, иногда прямо среди снега. Из одного вида крокуса получают шафран: для этого вручную собирают красные нити цветка. Чтобы получить всего один грамм, их нужно очень много, поэтому шафран такой дорогой. Он придаёт жёлтый цвет миланскому ризотто."
+    },
+    "sq": {
+     "nome": "krokus",
+     "testo": "Përshëndetje, unë jam krokusi! Në italisht, emri im vjen nga greqishtja. Lulëzoj kur është ende ftohtë, ndonjëherë mes borës. Nga një lloj krokusi nxirret shafrani: përdoren fijet e kuqe të lules, të mbledhura me dorë. Duhen shumë të tilla për një gram të vetëm, prandaj shafrani kushton kaq shtrenjtë. Ai i jep ngjyrën e verdhë rizotos milaneze."
+    },
+    "ar": {
+     "nome": "كروكوس",
+     "testo": "مرحبًا، أنا الكروكوس! اسمي بالإيطالية يأتي من اللغة اليونانية. أُزهر عندما يكون الطقس ما زال باردًا، وأحيانًا بين الثلج. من نوع خاص من الكروكوس يُستخرج الزعفران: تُستعمل الخيوط الحمراء في الزهرة، وتُقطف باليد. نحتاج إلى كمية كبيرة جدًا منها لنحصل على غرام واحد، ولهذا الزعفران غالٍ جدًا. وهو يعطي اللون الأصفر لطبق الريزوتو الميلاني."
+    },
+    "es": {
+     "nome": "croco",
+     "testo": "¡Hola, soy el croco! En italiano, mi nombre viene del griego. Florezco cuando todavía hace frío, a veces entre la nieve. De un tipo de croco se saca el azafrán: se usan los filamentos rojos de la flor, recogidos a mano. Hacen falta muchísimos para un solo gramo, por eso el azafrán es tan caro. Da el color amarillo al risotto a la milanesa."
+    }
+   }
+  }
+ ]
+}
