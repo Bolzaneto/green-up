@@ -1,0 +1,50 @@
+{
+ "titolo": "Green-up your school",
+ "sottotitolo": "Coltivare gli spazi, coltivare la cura per stare bene a scuola",
+ "scuola": "IC Bolzaneto · Scuola Media Gaslini · a.s. 2026/2027",
+ "intro": "E se a scuola il verde non fosse solo decorazione, ma parte della giornata? Green-up your school porta le piante nelle aule e nei corridoi, trasforma il cortile in un orto botanico didattico e insegna una cosa semplice e difficile: prendersi cura. Perché una pianta non cresce se la si controlla, ma se le si dà ciò di cui ha bisogno.",
+ "pilastri": [
+  {
+   "titolo": "Il verde entra a scuola",
+   "testo": "Piante in aule, corridoi, biblioteca e laboratori, ognuna con la sua carta d’identità botanica e un QR code per scoprirla."
+  },
+  {
+   "titolo": "Il cortile diventa un museo vivente",
+   "testo": "Un orto botanico didattico in quattro aree: aromatiche, impollinatori, piante resistenti alla siccità e fioriture di primavera. Le targhette in ceramica le fanno i ragazzi."
+  },
+  {
+   "titolo": "Prendersi cura, stare bene",
+   "testo": "Mindfulness, ceramica, teatro, lettura e uno sportello di ascolto: attività per imparare a scaricare la mente e allentare lo stress."
+  },
+  {
+   "titolo": "Un orto che si misura",
+   "testo": "Sensori nel terreno e una stazione meteo raccontano come stanno le piante e quanta acqua serve, anche recuperando quella piovana."
+  },
+  {
+   "titolo": "Insieme al territorio",
+   "testo": "Vivai della zona, IT Marsano, Comune di Genova e famiglie: il progetto cresce con chi sta intorno alla scuola."
+  }
+ ],
+ "documento": {
+  "etichetta": "Leggi il progetto completo",
+  "file": "documenti/Progetto_Green-up_your_school.pdf",
+  "nota": "Documento PDF · si apre in una nuova scheda"
+ },
+ "sezioni": [
+  {
+   "titolo": "Le piante dell’orto",
+   "testo": "Dieci piante in sei lingue: leggi e ascolta le schede.",
+   "link": "#piante"
+  },
+  {
+   "titolo": "Fasi del lavoro",
+   "testo": "A che punto siamo, con le foto del progetto.",
+   "link": "#fasi"
+  },
+  {
+   "titolo": "Dati dell’orto",
+   "testo": "Umidità del terreno e meteo, dai sensori.",
+   "link": "#dati"
+  }
+ ]
+}

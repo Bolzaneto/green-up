@@ -1,0 +1,78 @@
+{
+ "titolo": "Fasi del lavoro",
+ "sottotitolo": "A che punto siamo e che cosa stiamo facendo.",
+ "fasi": [
+  {
+   "id": "progetto",
+   "titolo": "Il progetto",
+   "stato": "fatto",
+   "periodo": "",
+   "descrizione": "Il progetto è scritto: obiettivi, aree del cortile e attività per il benessere.",
+   "avanzamento": "",
+   "foto": []
+  },
+  {
+   "id": "cartellone",
+   "titolo": "Cartellone botanico e QR code",
+   "stato": "incorso",
+   "periodo": "",
+   "descrizione": "Gli studenti disegnano le piante, scrivono i testi in sei lingue e registrano le letture. Ogni QR code porta alla scheda sul sito.",
+   "avanzamento": "Testi pronti in sei lingue: mancano foto e registrazioni.",
+   "foto": []
+  },
+  {
+   "id": "aule",
+   "titolo": "Piante nelle aule",
+   "stato": "dafare",
+   "periodo": "",
+   "descrizione": "Scelta delle piante per aule, corridoi, biblioteca e laboratori, con la carta d’identità botanica.",
+   "avanzamento": "",
+   "foto": []
+  },
+  {
+   "id": "collaborazioni",
+   "titolo": "Vivai, IT Marsano e Comune",
+   "stato": "dafare",
+   "periodo": "",
+   "descrizione": "Richiesta di piante, materiali e consulenza ai vivai della zona; incontri con l’IT Marsano; patrocinio del Comune.",
+   "avanzamento": "",
+   "foto": []
+  },
+  {
+   "id": "sensori",
+   "titolo": "Sensori e stazione meteo",
+   "stato": "dafare",
+   "periodo": "",
+   "descrizione": "Montaggio e programmazione dei sensori di umidità del terreno e della stazione meteo.",
+   "avanzamento": "",
+   "foto": []
+  },
+  {
+   "id": "cortile",
+   "titolo": "Recupero del cortile",
+   "stato": "dafare",
+   "periodo": "",
+   "descrizione": "Preparazione dello spazio esterno e progetto dell’orto botanico.",
+   "avanzamento": "",
+   "foto": []
+  },
+  {
+   "id": "orto",
+   "titolo": "Piantumazione e percorso botanico",
+   "stato": "dafare",
+   "periodo": "",
+   "descrizione": "Le quattro aree: aromatiche, impollinatori, piante resistenti alla siccità, primavera in giardino.",
+   "avanzamento": "",
+   "foto": []
+  },
+  {
+   "id": "scuola-aperta",
+   "titolo": "Targhette, pannelli e scuola aperta",
+   "stato": "dafare",
+   "periodo": "",
+   "descrizione": "Targhette in ceramica fatte dai ragazzi, pannelli didattici e giornate aperte alle famiglie.",
+   "avanzamento": "",
+   "foto": []
+  }
+ ]
+}

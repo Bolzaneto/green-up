@@ -56,9 +56,60 @@ h1,h2{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0}
 .sec p{margin:0}
 .err{background:var(--surface);border:2px solid var(--ink);border-radius:4px;padding:1rem}
 .foot{margin-top:2.5rem;color:var(--muted);font-size:.9rem}
+#nav{display:flex;flex-wrap:wrap;gap:.25rem .4rem;max-width:38rem;margin:0 auto;padding:.7rem 1.1rem 0}
+#nav a{padding:.45rem .7rem;border-radius:999px;color:var(--ink);text-decoration:none;font-weight:700;border:2px solid transparent}
+#nav a[aria-current]{border-color:var(--accent);color:var(--accent)}
+.sec-title{font-size:2.1rem;margin-bottom:.3rem}
+.kicker{margin:0 0 .4rem;color:var(--muted);font-size:.95rem;font-weight:700}
+.hero{font-size:2.9rem}
+.tagline{font-family:var(--serif);font-style:italic;font-size:1.25rem;margin:.4rem 0 1rem;color:var(--accent)}
+.intro{font-size:1.15rem;margin:0 0 1.4rem}
+.pillars{display:grid;gap:.8rem;margin:0 0 1.6rem}
+.pillar{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:.9rem 1rem}
+.pillar h2{font-size:1.2rem;margin-bottom:.25rem}.pillar p{margin:0}
+.btn{display:inline-flex;align-items:center;min-height:3.2rem;padding:.6rem 1.3rem;background:var(--accent);color:var(--accent-ink);border-radius:6px;font-weight:700;text-decoration:none;font-size:1.1rem}
+.note{color:var(--muted);font-size:.92rem;margin:.5rem 0 0}
+.sub{font-size:1.4rem;margin:2rem 0 .7rem}
+.tiles{display:grid;gap:.7rem}
+.tile{display:block;border:2px solid var(--ink);border-radius:4px;padding:.8rem 1rem;color:inherit;text-decoration:none;background:var(--surface)}
+.tile b{display:block;font-family:var(--serif);font-size:1.2rem}.tile span{color:var(--muted)}
+.bar{display:flex;gap:4px;margin:.4rem 0 .5rem}
+.seg{flex:1;height:.9rem;border-radius:3px;border:2px dashed var(--line)}
+.seg.fatto{background:var(--accent);border:2px solid var(--accent)}
+.seg.incorso{background:linear-gradient(90deg,var(--accent) 50%,transparent 50%);border:2px solid var(--accent)}
+.ptext{margin:0 0 1.4rem;color:var(--muted)}
+.tl{list-style:none;margin:0;padding:0}
+.step{display:grid;grid-template-columns:2.4rem 1fr;gap:.8rem;position:relative;padding-bottom:1rem}
+.step::before{content:"";position:absolute;left:1.2rem;top:2.4rem;bottom:0;border-left:2px solid var(--line)}
+.step:last-child::before{display:none}
+.node{width:2.4rem;height:2.4rem;border-radius:50%;display:grid;place-items:center;font-weight:700;border:2px dashed var(--line);background:var(--bg);color:var(--muted)}
+.step.fatto .node{background:var(--accent);border:2px solid var(--accent);color:var(--accent-ink)}
+.step.incorso .node{border:3px solid var(--accent);color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 25%,transparent)}
+.tcard{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:.8rem 1rem}
+.step.incorso .tcard{border:2px solid var(--accent)}
+.tcard h2{font-size:1.25rem;margin:.3rem 0 .25rem}.tcard p{margin:.2rem 0}
+.badge{font-size:.85rem;font-weight:700;padding:.1rem .6rem;border-radius:999px;border:2px solid var(--line);color:var(--muted)}
+.badge.fatto{border-color:var(--accent);color:var(--accent)}.badge.incorso{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.thead{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}.per{color:var(--muted);font-size:.9rem}
+.adv{font-weight:700}
+.photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(8rem,1fr));gap:.5rem;margin-top:.6rem}
+.photos figure{margin:0}.photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;display:block}
+.photos figcaption{font-size:.8rem;color:var(--muted)}
+.ph-empty{grid-column:1/-1;border:2px dashed var(--line);border-radius:4px;padding:.7rem;color:var(--muted);font-size:.9rem;text-align:center;margin:0}
+.warn{border:2px dashed var(--ink);border-radius:4px;padding:.7rem .9rem;background:var(--surface)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(11rem,1fr));gap:.8rem}
+.dcard{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:.8rem}
+.dcard h3{font-family:var(--sans);font-size:1rem;margin:0 0 .2rem;color:var(--muted)}
+.big{font-family:var(--serif);font-size:2rem;font-weight:600;line-height:1.1}
+.st{margin:.1rem 0 .5rem;font-weight:700;font-size:.95rem}
+.gauge{height:.7rem;border:2px solid var(--ink);border-radius:999px;overflow:hidden;margin-bottom:.5rem}
+.gauge span{display:block;height:100%;background:var(--accent)}
+.spark{color:var(--accent)}.spark svg{width:100%;height:3rem;display:block}
+.axis{display:flex;justify-content:space-between;color:var(--muted);font-size:.75rem}
 </style>
 </head>
 <body>
+<nav id="nav" aria-label="Sezioni del sito"><a href="#" data-r="">Home</a><a href="#piante" data-r="piante">Piante</a><a href="#fasi" data-r="fasi">Fasi</a><a href="#dati" data-r="dati">Dati</a></nav>
 <div class="wrap"><main id="app" aria-live="polite"></main></div>
 <script>
 (function(){
@@ -91,11 +142,10 @@ function dirOf(code){ var L=DATA.lingue[code]; return (L&&L.dir)||"ltr"; }
 function stopAudio(){ if(audio){ audio.pause(); audio=null; } }
 function placeholder(cls,msg){ return h("div",{class:cls+" ph",text:msg}); }
 
-function renderHome(){
+function renderPiante(){
   stopAudio(); document.title=DATA.titolo;
   app.textContent="";
-  app.appendChild(h("h1",{class:"site-title",text:DATA.titolo}));
-  app.appendChild(h("p",{class:"site-sub",text:DATA.sottotitolo}));
+  app.appendChild(h("h1",{class:"sec-title",text:"Le piante dell’orto"}));
   app.appendChild(h("p",{class:"hint",text:ui(lang,"scegli")}));
   var ul=h("ul",{class:"list"});
   DATA.piante.forEach(function(p){
@@ -114,7 +164,7 @@ function renderPlant(p){
   var l=pickLang(p), info=p.lingue[l];
   document.title=info.nome+" – "+DATA.titolo;
   app.textContent="";
-  app.appendChild(h("a",{class:"back",href:"#",text:ui(l,"tutte")}));
+  app.appendChild(h("a",{class:"back",href:"#piante",text:ui(l,"tutte")}));
 
   var img=h("img",{class:"photo",src:p.immagine,alt:info.nome+" ("+p.nomeScientifico+")"});
   img.onerror=function(){ img.replaceWith(placeholder("photo","Immagine non ancora caricata: "+p.immagine)); };
@@ -170,13 +220,91 @@ function renderPlant(p){
   window.scrollTo(0,0);
 }
 
+var NAV=document.getElementById("nav"),rid=0;
+function getJSON(n){var I=window.__INLINE__;if(I&&I[n])return Promise.resolve(I[n]);return fetch(n).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();});}
+function setNav(s){NAV.querySelectorAll("a").forEach(function(a){if(a.dataset.r===s)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});}
+function load(name,i,fn){getJSON(name).then(function(d){if(i===rid)fn(d);}).catch(function(){if(i!==rid)return;app.textContent="";app.appendChild(h("p",{class:"err",text:"Contenuto non disponibile al momento ("+name+")."}));});}
+function head(t,s){app.textContent="";document.title=t+" – "+DATA.titolo;app.appendChild(h("h1",{class:"sec-title",text:t}));if(s)app.appendChild(h("p",{class:"site-sub",text:s}));}
+
+function viewHome(i){load("home.json",i,function(H){
+ app.textContent="";document.title=H.titolo;
+ app.appendChild(h("p",{class:"kicker",text:H.scuola}));
+ app.appendChild(h("h1",{class:"site-title hero",text:H.titolo}));
+ app.appendChild(h("p",{class:"tagline",text:H.sottotitolo}));
+ app.appendChild(h("p",{class:"intro",text:H.intro}));
+ var g=h("div",{class:"pillars"});
+ H.pilastri.forEach(function(p){g.appendChild(h("div",{class:"pillar"},h("h2",{text:p.titolo}),h("p",{text:p.testo})));});
+ app.appendChild(g);
+ var d=H.documento;
+ app.appendChild(h("div",null,h("a",{class:"btn",href:d.file,target:"_blank",rel:"noopener",text:d.etichetta}),h("p",{class:"note",text:d.nota})));
+ app.appendChild(h("h2",{class:"sub",text:"Esplora il sito"}));
+ var t=h("div",{class:"tiles"});
+ H.sezioni.forEach(function(s){t.appendChild(h("a",{class:"tile",href:s.link},h("b",{text:s.titolo}),h("span",{text:s.testo})));});
+ app.appendChild(t);
+});}
+
+function viewFasi(i){load("fasi.json",i,function(F){
+ head(F.titolo,F.sottotitolo);
+ var f=F.fasi,L={fatto:"Fatto",incorso:"In corso · siamo qui",dafare:"Da fare"};
+ var done=f.filter(function(x){return x.stato==="fatto";}).length;
+ var cur=f.filter(function(x){return x.stato==="incorso";}).map(function(x){return x.titolo;});
+ var txt=done+(done===1?" fase su ":" fasi su ")+f.length+(done===1?" completata":" completate")+(cur.length?" · ora: "+cur.join(", "):"");
+ var bar=h("div",{class:"bar",role:"img","aria-label":txt});
+ f.forEach(function(x){bar.appendChild(h("span",{class:"seg "+x.stato}));});
+ app.appendChild(bar);app.appendChild(h("p",{class:"ptext",text:txt}));
+ var ol=h("ol",{class:"tl"});
+ f.forEach(function(x,k){
+  var c=h("div",{class:"tcard"});
+  c.appendChild(h("div",{class:"thead"},h("span",{class:"badge "+x.stato,text:L[x.stato]}),x.periodo?h("span",{class:"per",text:x.periodo}):null));
+  c.appendChild(h("h2",{text:x.titolo}));c.appendChild(h("p",{text:x.descrizione}));
+  if(x.avanzamento)c.appendChild(h("p",{class:"adv",text:x.avanzamento}));
+  var ph=h("div",{class:"photos"}),fo=x.foto||[];
+  fo.forEach(function(p){var im=h("img",{src:p.file,alt:p.didascalia||"",loading:"lazy"}),fg=h("figure",null,im,p.didascalia?h("figcaption",{text:p.didascalia}):null);im.onerror=function(){fg.remove();};ph.appendChild(fg);});
+  if(!fo.length&&x.stato!=="dafare")ph.appendChild(h("p",{class:"ph-empty",text:"Qui compariranno le foto di questa fase."}));
+  if(ph.childNodes.length)c.appendChild(ph);
+  ol.appendChild(h("li",{class:"step "+x.stato},h("span",{class:"node","aria-hidden":"true",text:x.stato==="fatto"?"✓":String(k+1)}),c));
+ });
+ app.appendChild(ol);
+});}
+
+function spark(s,mn,mx,lab){
+ var n=s.length,pts=s.map(function(v,k){return (k*200/(n-1)).toFixed(1)+","+(45-(v-mn)/(mx-mn)*42).toFixed(1);}).join(" ");
+ var d=h("div",{class:"spark"});
+ d.innerHTML='<svg viewBox="0 0 200 48" preserveAspectRatio="none" role="img" aria-label="'+lab+'"><polyline points="'+pts+'" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>';
+ d.appendChild(h("div",{class:"axis"},h("span",{text:"7 giorni fa"}),h("span",{text:"oggi"})));return d;
+}
+function viewDati(i){load("dati.json",i,function(X){
+ head("Dati dell’orto","Umidità del terreno e meteo, misurati dai sensori della scuola.");
+ if(X.esempio)app.appendChild(h("p",{class:"warn",text:"Dati di esempio: i sensori non sono ancora collegati. Questi numeri servono a mostrare come sarà la pagina."}));
+ app.appendChild(h("p",{class:"note",text:"Ultimo aggiornamento: "+X.aggiornato}));
+ app.appendChild(h("h2",{class:"sub",text:"Green Inside · umidità del terreno"}));
+ var g=h("div",{class:"cards"}),S=X.soglie;
+ X.postazioni.forEach(function(p){
+  var v=p.serie[p.serie.length-1],st=v<S[0]?["secco","Terreno secco: serve acqua"]:v>S[1]?["umido","Molto umido"]:["ok","Umidità giusta"];
+  var c=h("div",{class:"dcard"},h("h3",{text:p.nome}),h("div",{class:"big",text:v+"%"}),h("p",{class:"st",text:st[1]}));
+  var gb=h("div",{class:"gauge",role:"img","aria-label":"Umidità "+v+" per cento"},h("span",{style:"width:"+v+"%"}));
+  c.appendChild(gb);
+  c.appendChild(spark(p.serie,0,100,"Andamento negli ultimi 7 giorni, da "+Math.min.apply(null,p.serie)+" a "+Math.max.apply(null,p.serie)+" per cento"));
+  g.appendChild(c);});
+ app.appendChild(g);
+ app.appendChild(h("h2",{class:"sub",text:"Green Outside · stazione meteo"}));
+ var m=h("div",{class:"cards"});
+ X.meteo.forEach(function(x){
+  var c=h("div",{class:"dcard"},h("h3",{text:x.nome}),h("div",{class:"big",text:x.valore+" "+x.unita}));
+  if(x.serie){var mn=Math.min.apply(null,x.serie),mx=Math.max.apply(null,x.serie);c.appendChild(spark(x.serie,mn-1,mx+1,"Andamento negli ultimi 7 giorni, da "+mn+" a "+mx+" "+x.unita));}
+  m.appendChild(c);});
+ app.appendChild(m);
+});}
+
 function route(){
-  var id=decodeURIComponent((location.hash||"").slice(1));
+  var id=decodeURIComponent((location.hash||"").slice(1)),i=++rid;
   var p=DATA.piante.filter(function(x){return x.id===id;})[0];
-  if(p) renderPlant(p); else renderHome();
+  stopAudio();window.scrollTo(0,0);
+  setNav(p?"piante":(id==="piante"||id==="fasi"||id==="dati")?id:"");
+  if(p)renderPlant(p);else if(id==="piante")renderPiante();else if(id==="fasi")viewFasi(i);else if(id==="dati")viewDati(i);else viewHome(i);
 }
 
-fetch("piante.json").then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+getJSON("piante.json")
 .then(function(d){ DATA=d; window.addEventListener("hashchange",route); route(); })
 .catch(function(){
   app.textContent="";
