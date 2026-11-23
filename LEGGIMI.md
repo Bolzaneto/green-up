@@ -58,6 +58,6 @@ Per aggiungere le registrazioni basta caricare gli MP3 nella cartella giusta.
 ## Le sezioni del sito
 Menu: **Home**, **Piante**, **Fasi del lavoro**, **Dati**. Ogni sezione legge un proprio file; per cambiare un contenuto si modifica il file con l’icona a matita su GitHub e si conferma con *Commit changes*.
 
-- **Home** – `home.json`: titolo, presentazione, riquadri e pulsante del documento. Il documento completo è `documenti/Progetto_Green-up_your_school.pdf`: per aggiornarlo basta caricare in quella cartella un PDF con **lo stesso nome**.
+- **Home** – `home.json`: titolo, presentazione, striscia dei numeri, schede «Il progetto in breve», riquadri di accesso e pulsante del documento. Il documento completo è `documenti/Progetto_Green-up_your_school.pdf`: per aggiornarlo basta caricare in quella cartella un PDF con **lo stesso nome**.
 - **Fasi del lavoro** – `fasi.json`: per ogni fase cambia `"stato"` in `"fatto"`, `"incorso"` o `"dafare"`, e se vuoi scrivi `"periodo"` e `"avanzamento"`. La barra e la linea del tempo si aggiornano da sole. Foto: caricale in `fasi/` e aggiungi nella fase `"foto": [{"file": "fasi/cartellone-1.jpg", "didascalia": "Gli studenti al lavoro"}]`. Niente volti riconoscibili senza liberatoria.
 - **Dati** – `dati.json`: ora contiene dati di esempio (`"esempio": true`). Per usarlo a mano sostituisci le serie di numeri con le misure reali e porta `"esempio"` a `false`. In futuro i dati potranno arrivare automaticamente dai sensori.

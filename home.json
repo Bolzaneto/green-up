@@ -6,23 +6,23 @@
  "pilastri": [
   {
    "titolo": "Il verde entra a scuola",
-   "testo": "Piante in aule, corridoi, biblioteca e laboratori, ognuna con la sua carta d’identità botanica e un QR code per scoprirla."
+   "testo": "Piante in aule e corridoi, ognuna con il suo QR code."
   },
   {
    "titolo": "Il cortile diventa un museo vivente",
-   "testo": "Un orto botanico didattico in quattro aree: aromatiche, impollinatori, piante resistenti alla siccità e fioriture di primavera. Le targhette in ceramica le fanno i ragazzi."
+   "testo": "Un orto botanico didattico in quattro aree."
   },
   {
    "titolo": "Prendersi cura, stare bene",
-   "testo": "Mindfulness, ceramica, teatro, lettura e uno sportello di ascolto: attività per imparare a scaricare la mente e allentare lo stress."
+   "testo": "Mindfulness, ceramica, teatro e uno sportello di ascolto."
   },
   {
    "titolo": "Un orto che si misura",
-   "testo": "Sensori nel terreno e una stazione meteo raccontano come stanno le piante e quanta acqua serve, anche recuperando quella piovana."
+   "testo": "Sensori e stazione meteo raccontano come stanno le piante."
   },
   {
    "titolo": "Insieme al territorio",
-   "testo": "Vivai della zona, IT Marsano, Comune di Genova e famiglie: il progetto cresce con chi sta intorno alla scuola."
+   "testo": "Vivai, IT Marsano, Comune e famiglie."
   }
  ],
  "documento": {
@@ -45,6 +45,24 @@
    "titolo": "Dati dell’orto",
    "testo": "Umidità del terreno e meteo, dai sensori.",
    "link": "#dati"
+  }
+ ],
+ "numeri": [
+  {
+   "n": "10",
+   "t": "piante"
+  },
+  {
+   "n": "6",
+   "t": "lingue"
+  },
+  {
+   "n": "4",
+   "t": "aree nel cortile"
+  },
+  {
+   "n": "4",
+   "t": "postazioni sensori"
   }
  ]
 }

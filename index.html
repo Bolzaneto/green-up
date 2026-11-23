@@ -106,6 +106,27 @@ h1,h2{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0}
 .gauge span{display:block;height:100%;background:var(--accent)}
 .spark{color:var(--accent)}.spark svg{width:100%;height:3rem;display:block}
 .axis{display:flex;justify-content:space-between;color:var(--muted);font-size:.75rem}
+
+:root{--c-piante:#2D5A3D;--c-fasi:#8A5A00;--c-dati:#1F6A8A}
+@media (prefers-color-scheme:dark){:root{--c-piante:#86CBA0;--c-fasi:#E3B25C;--c-dati:#7CC0DE}}
+body[data-sec="fasi"]{--accent:var(--c-fasi);--accent-ink:#fff}
+body[data-sec="dati"]{--accent:var(--c-dati);--accent-ink:#fff}
+@media (prefers-color-scheme:dark){body[data-sec="fasi"]{--accent-ink:#1F1600}body[data-sec="dati"]{--accent-ink:#0B1F29}}
+#nav a[data-r="fasi"][aria-current]{border-color:var(--c-fasi);color:var(--c-fasi)}
+#nav a[data-r="dati"][aria-current]{border-color:var(--c-dati);color:var(--c-dati)}
+.hero-art{display:block;width:100%;height:6.5rem;color:var(--c-piante);margin:0 0 .8rem}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:.3rem;margin:0 0 1.4rem;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:.7rem 0}
+.stat{text-align:center}.stat b{display:block;font-family:var(--serif);font-size:1.9rem;line-height:1}
+.stat span{display:block;font-size:.78rem;color:var(--muted);line-height:1.2;margin-top:.25rem}
+.rail{scroll-padding-left:1.1rem;display:flex;gap:.7rem;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -1.1rem 1.6rem;padding:.2rem 1.1rem .9rem}
+.rcard{flex:0 0 72%;max-width:16rem;scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--rc);border-radius:4px;padding:.8rem .9rem}
+.rcard h3{font-size:1.1rem;margin-bottom:.3rem}.rcard p{margin:0}
+.tile{display:flex;gap:.9rem;align-items:center;border:2px solid var(--tc);background:color-mix(in srgb,var(--tc) 11%,var(--surface))}
+.tile svg{width:2.4rem;height:2.4rem;flex:none;color:var(--tc);stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tile b{color:var(--ink)}
+.mini{margin-top:2rem;border:2px solid var(--c-fasi);border-radius:4px;padding:.8rem 1rem;background:var(--surface);--accent:var(--c-fasi)}
+.mini h2{font-size:1.25rem;margin-bottom:.4rem}.mini .ptext{margin:0 0 .5rem}
+.mini a{color:var(--c-fasi);font-weight:700}
 </style>
 </head>
 <body>
@@ -222,25 +243,45 @@ function renderPlant(p){
 
 var NAV=document.getElementById("nav"),rid=0;
 function getJSON(n){var I=window.__INLINE__;if(I&&I[n])return Promise.resolve(I[n]);return fetch(n).then(function(r){if(!r.ok)throw new Error(r.status);return r.json();});}
-function setNav(s){NAV.querySelectorAll("a").forEach(function(a){if(a.dataset.r===s)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});}
+function setNav(s){document.body.dataset.sec=s;NAV.querySelectorAll("a").forEach(function(a){if(a.dataset.r===s)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});}
 function load(name,i,fn){getJSON(name).then(function(d){if(i===rid)fn(d);}).catch(function(){if(i!==rid)return;app.textContent="";app.appendChild(h("p",{class:"err",text:"Contenuto non disponibile al momento ("+name+")."}));});}
 function head(t,s){app.textContent="";document.title=t+" – "+DATA.titolo;app.appendChild(h("h1",{class:"sec-title",text:t}));if(s)app.appendChild(h("p",{class:"site-sub",text:s}));}
 
+var ART="<svg class=\"hero-art\" viewBox=\"0 0 380 130\" preserveAspectRatio=\"xMidYMax meet\" aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M40 128C42 98 38 62 44 22\"/><ellipse cx=\"44\" cy=\"20\" rx=\"4\" ry=\"9\"/><ellipse cx=\"38\" cy=\"34\" rx=\"4\" ry=\"8\" transform=\"rotate(-20 38 34)\"/><ellipse cx=\"50\" cy=\"38\" rx=\"4\" ry=\"8\" transform=\"rotate(20 50 38)\"/><ellipse cx=\"38\" cy=\"50\" rx=\"4\" ry=\"8\" transform=\"rotate(-20 38 50)\"/><ellipse cx=\"50\" cy=\"54\" rx=\"4\" ry=\"8\" transform=\"rotate(20 50 54)\"/><ellipse cx=\"40\" cy=\"68\" rx=\"4\" ry=\"8\" transform=\"rotate(-15 40 68)\"/><path d=\"M42 108C30 104 24 96 22 86C32 88 40 96 42 108Z\"/><path d=\"M120 128V58\"/><path d=\"M104 32C104 58 136 58 136 32C131 40 126 36 120 24C114 36 109 40 104 32Z\"/><path d=\"M120 126C100 120 92 100 96 82C110 92 118 108 120 126Z\"/><path d=\"M120 126C140 120 148 104 144 88C130 96 124 110 120 126Z\"/><path d=\"M204 128C207 98 202 62 209 26\"/><path d=\"M205 100l-12 -7M205 100l12 -7\"/><path d=\"M205 88l-12 -7M205 88l12 -7\"/><path d=\"M205 76l-12 -7M205 76l12 -7\"/><path d=\"M205 64l-12 -7M205 64l12 -7\"/><path d=\"M205 52l-12 -7M205 52l12 -7\"/><path d=\"M205 40l-12 -7M205 40l12 -7\"/><path d=\"M300 128C290 88 310 46 352 22C362 62 342 104 300 128Z\"/><path d=\"M300 128C318 90 336 60 352 22\"/></svg>",IC={"piante": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 19C5 10 10 5 20 4c0 10-5 15-14 15zM5 19l8-8\"/></svg>", "fasi": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 20h5v-5h5v-5h5V5h3\"/></svg>", "dati": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 4v16h18M7 14l4-4 3 3 5-6\"/></svg>"};
 function viewHome(i){load("home.json",i,function(H){
  app.textContent="";document.title=H.titolo;
+ var art=h("div");art.innerHTML=ART;app.appendChild(art.firstChild);
  app.appendChild(h("p",{class:"kicker",text:H.scuola}));
  app.appendChild(h("h1",{class:"site-title hero",text:H.titolo}));
  app.appendChild(h("p",{class:"tagline",text:H.sottotitolo}));
  app.appendChild(h("p",{class:"intro",text:H.intro}));
- var g=h("div",{class:"pillars"});
- H.pilastri.forEach(function(p){g.appendChild(h("div",{class:"pillar"},h("h2",{text:p.titolo}),h("p",{text:p.testo})));});
- app.appendChild(g);
+ var st=h("div",{class:"stats"});
+ H.numeri.forEach(function(n){st.appendChild(h("div",{class:"stat"},h("b",{text:n.n}),h("span",{text:n.t})));});
+ app.appendChild(st);
+ app.appendChild(h("h2",{class:"sub",text:"Il progetto in breve"}));
+ var rail=h("div",{class:"rail",tabindex:"0","aria-label":"Il progetto in breve: scorri di lato"}),cs=["--c-piante","--c-fasi","--c-dati"];
+ H.pilastri.forEach(function(p,k){rail.appendChild(h("div",{class:"rcard",style:"--rc:var("+cs[k%3]+")"},h("h3",{text:p.titolo}),h("p",{text:p.testo})));});
+ app.appendChild(rail);
  var d=H.documento;
  app.appendChild(h("div",null,h("a",{class:"btn",href:d.file,target:"_blank",rel:"noopener",text:d.etichetta}),h("p",{class:"note",text:d.nota})));
  app.appendChild(h("h2",{class:"sub",text:"Esplora il sito"}));
  var t=h("div",{class:"tiles"});
- H.sezioni.forEach(function(s){t.appendChild(h("a",{class:"tile",href:s.link},h("b",{text:s.titolo}),h("span",{text:s.testo})));});
+ H.sezioni.forEach(function(s){
+  var ic=h("span");ic.innerHTML=IC[s.link.slice(1)]||"";
+  t.appendChild(h("a",{class:"tile",href:s.link,style:"--tc:var(--c-"+s.link.slice(1)+")"},ic,h("span",null,h("b",{text:s.titolo}),h("span",{text:s.testo}))));
+ });
  app.appendChild(t);
+ var mini=h("div",{class:"mini"});app.appendChild(mini);
+ getJSON("fasi.json").then(function(F){
+  if(i!==rid)return;
+  var f=F.fasi,done=f.filter(function(x){return x.stato==="fatto";}).length,
+   cur=f.filter(function(x){return x.stato==="incorso";}).map(function(x){return x.titolo;}),
+   txt=done+(done===1?" fase su ":" fasi su ")+f.length+(done===1?" completata":" completate")+(cur.length?" · ora: "+cur.join(", "):""),
+   bar=h("div",{class:"bar",role:"img","aria-label":txt});
+  f.forEach(function(x){bar.appendChild(h("span",{class:"seg "+x.stato}));});
+  mini.appendChild(h("h2",{text:"A che punto siamo"}));mini.appendChild(bar);mini.appendChild(h("p",{class:"ptext",text:txt}));
+  mini.appendChild(h("a",{href:"#fasi",text:"Guarda tutte le fasi"}));
+ }).catch(function(){mini.remove();});
 });}
 
 function viewFasi(i){load("fasi.json",i,function(F){
